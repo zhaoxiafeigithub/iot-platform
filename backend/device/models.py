@@ -8,6 +8,7 @@ from django.db import models
 class Device(models.Model):
     device_id = models.CharField(max_length=64, unique=True)
     name = models.CharField(max_length=100)
+    online = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_delete = models.BooleanField(default=False)
